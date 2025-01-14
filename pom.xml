@@ -17,7 +17,9 @@
   <url>https://github.com/jenkinsci/mq-notifier-plugin</url>
 
   <properties>
-    <jenkins.version>2.375.3</jenkins.version>
+    <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
+    <jenkins.baseline>2.375</jenkins.baseline>
+    <jenkins.version>${jenkins.baseline}.3</jenkins.version>
     <jmockit.version>1.49</jmockit.version>
   </properties>
 
@@ -201,7 +203,7 @@
     <dependencies>
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
-        <artifactId>bom-2.375.x</artifactId>
+        <artifactId>bom-${jenkins.baseline}.x</artifactId>
         <version>2179.v0884e842b_859</version>
         <scope>import</scope>
         <type>pom</type>
